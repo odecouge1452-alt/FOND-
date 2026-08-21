@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Typography System:
+       - Headlines / Hero / Section Titles -> Montserrat Alternates (Google Fonts, SemiBold 600)
+       - Body copy, nav, buttons, forms, labels -> Montserrat (400/500 body, 500/600 buttons & nav)
+       - Exclusive Script Logotype -> Fond Logo mark only
+    */
+    --font-heading: 'Montserrat Alternates', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: var(--font-heading);
+    --font-sans: var(--font-body);
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    background-color: #F7F5F1;
+    color: #141210;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headlines / Titles in Montserrat Alternates SemiBold */
+  h1, h2, h3, h4, h5, h6, .editorial-title, .font-heading, .font-serif {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+  }
+
+  .font-sans {
+    font-family: var(--font-body);
+  }
+
+  /* Body copy in Montserrat */
+  p, span, blockquote, label, input, textarea {
+    font-family: var(--font-body);
+  }
+
+  /* Buttons & Nav in Montserrat (500/600 weight) */
+  button, nav, a {
+    font-family: var(--font-body);
+  }
+}
+
+/* Custom editorial utilities */
+.editorial-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.eyebrow-text {
+  font-family: var(--font-body);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+/* Fluted glass & tactile shine effects */
+.fluted-glass-overlay {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.08) 0px,
+    rgba(255, 255, 255, 0.08) 3px,
+    transparent 3px,
+    transparent 7px
+  );
+}
+
+.frosted-glass-subtle {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(247, 245, 241, 0.82);
+  border: 1px solid rgba(20, 18, 16, 0.08);
+}
+
+.dark-glass-card {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(26, 24, 22, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle luxury grain */
+.grain-overlay {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 0);
+  background-size: 8px 8px;
+}
+
+/* Scrollbar polish */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F5F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5D0C7;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9E9689;
+}
+
+/* Logo & Vector Sharpness Optimization */
+.logo-crisp,
+#nav-brand-logo svg,
+#footer-brand-logo svg,
+svg[id*="fond"] {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+

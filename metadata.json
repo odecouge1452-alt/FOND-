@@ -1,0 +1,6 @@
+{
+  "name": "Fond — Small-Batch Perfume House",
+  "description": "An ultra-premium landing site for Fond, an artisanal niche perfume house featuring fanned bottle reveals, tactile editorial animations, dark bento collection showcase, and custom scent quiz.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
